@@ -56,10 +56,6 @@ E.
 lettersbetween_15_to_24 <- letters[15:24]
 letters
 ```
-2.
-A.
-```{r}
 
-```
 
 
