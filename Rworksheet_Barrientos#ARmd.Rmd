@@ -1,6 +1,14 @@
 ---
-title: "RWorksheet_Barrientos#3A.Rmd"
+title: "RWorksheet_Barrientos#ARmn.Rmd"
 author: "Auderie Josh Barrientos"
+date: "2024-10-11"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+itle: "RWorksheet_Quebral#3"
+author: "Myles Andrei Quebral"
 date: "2024-09-30"
 output: pdf_document
 ---
@@ -9,53 +17,180 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-
 1.
-A.
+a.
 ```{r}
-first_11_LETTERS <- (1:11)
-first_11_LETTERS
+Letters <- c("A","B","C","D","E","F","G","H","I","J","K","L","M","N", "O","P","Q","R","S","T","U","V","W","X","Y","Z")
+
+letters <- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n", "o","p","q","r","s","t","u","v","w","x","y","z")
 ```
-B.
+
 ```{r}
-odd_numbers <- LETTERS[seq(1,length(LETTERS), by = 2)]
-odd_numbers
+eleven <- Letters[1:11]
+eleven
 ```
-C.
+
+b.
 ```{r}
-vowels <- c("A", "E", "I", "O", "U")
+odd <- Letters[seq("1","26", by = 2)]
+odd
+```
+
+c.
+```{r}
+vowels <- Letters[c(1,5,9,15,21)]
 vowels
 ```
-D.
+d.
 ```{r}
-last_5_lowercase <- c("v", "w", "x", "y", "z")
-last_5_lowercase
+last5 <- tail(letters,5)
+last5
 ```
-E.
+e.
 ```{r}
-lettersbetween_15_to_24 <- letters[15:24]
-letters
+between <- letters[c(15:24)]
+between
+```
+2.
+
+```{r}
+
+tempp <- c(42,39,34,34,30,27)
+```
+a.
+```{r}
+
+place <- c("Tuguegarao City", "Manila", "Iloilo City", "Tacloban","Samal Island", "Davao City")
+```
+b.
+```{r}
+
+temp <- mean(tempp)
+temp
+```
+c.
+```{r}
+
+city_temp <- data.frame(tempp,place)
+city_temp
+```
+
+d.
+```{r}
+names(city_temp) <-  c("Temperature", "City") 
+city_temp
+```
+e.
+```{r}
+
+str(city_temp)
 ```
 
 
+f.
+```{r}
 
+row_content3 <- city_temp[3,]
+row_content4 <- city_temp[4,]
+
+row_content3
+row_content4
+
+```
+
+g.
+```{r}
+
+max_index <- max(city_temp$Temperature)
+max_index
+
+min_index <- min(city_temp$Temperature)
+min_index
+```
+2.
+```{r}
+
+matrics <- matrix(c(1:8,11:14),nrow=3,ncol=4)
+matrics
+```
+
+b.
+```{r}
+
+multiply <- matrics*2
+multiply
+```
+c.
+```{r}
+
+row2 <- matrics[2,]
+row2
+```
+
+d.
+```{r}
+
+display <-  matrics[1:2,3:4]
+display
+```
+
+e.
+```{r}
+
+col23 <- matrics[3,2:3]
+col23
+
+```
+
+f.
+```{r}
+col4 <- matrics[,4]
+col4
+
+```
+g.
+```{r}
+dimnames(multiply) <- list( c("isa", "dalawa", "tatlo"),  c("uno", "dos", "tres", "quatro"))
+multiply
+```
+
+h.
+```{r}
+dim(matrics) <- c(6,2)
+matrics
+```
+3.
+
+```{r}
+arr <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
+arr
+rra <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
+rra
+```
+a.
+
+
+```{r}
+aray <- array(c(arr,rra),dim=c(2,4,3))
+ aray
+```
+b.
+
+3.
+
+C.
+```{r}
+column.names <- c("A","B","C","D")
+row.names <- c("a","b")
+matrix.names <- c("1st-Dimensional Array","2nd-Dimensional Array","3rd-Dimensional Array")
+
+aray <- array(c(arr,rra),dim = c(2,4,3),dimnames = list(row.names,column.names,
+   matrix.names))
+aray
+```
