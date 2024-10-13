@@ -7,11 +7,6 @@ output:
   word_document: default
 ---
 
-itle: "RWorksheet_Quebral#3"
-author: "Myles Andrei Quebral"
-date: "2024-09-30"
-output: pdf_document
----
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
