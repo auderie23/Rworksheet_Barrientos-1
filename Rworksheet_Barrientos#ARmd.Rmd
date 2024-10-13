@@ -8,15 +8,6 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
 1.
 a.
