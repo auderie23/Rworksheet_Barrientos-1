@@ -5,8 +5,8 @@ date: "2024-10-13"
 output: pdf_document
 ---
 
-1.  
-A.  
+#1.  
+#a.  
 
 ```{r}
 data <- data.frame(
@@ -20,54 +20,54 @@ data <- data.frame(
 data
 ```
 
-B.  
+#b.  
 
 ```{r}
 str(data)
 summary(data)
 ```
 
-C.  
+#c.  
 
 ```{r}
 mean(data$Siblings_at_School)
 ```
 
-D.  
+#d.  
 
 ```{r}
 data[1:2, ]
 ```
 
-E.  
+#e. 
 
 ```{r}
 data[c(3, 5), c(2, 4)]
 ```
 
-F.  
+#f.  
 
 ```{r}
 types_houses <- data$Types_of_Houses
 types_houses
 ```
 
-G.  
+#g.  
 
 ```{r}
 Male_Farmers <- subset(data, Sex == 1 & FatherOccupation == 1)
 Male_Farmers
 ```
 
-H.  
+#h.  
 
 ```{r}
 Female_Siblings <- subset(data, Sex == 2 & Siblings_at_School >= 5)
 Female_Siblings
 ```
 
-2.  
-A.  
+#2.  
+#a.  
 
 ```{r}
 df = data.frame(Ints=integer(),
@@ -81,22 +81,22 @@ print("Structure of the empty dataframe:")
 print(str(df))
 ```
 
-3.  
-A.  
+#3.  
+#a.  
 
 ```{r}
 datac <- read.csv("HouseholdData.csv")
 datac
 ```
 
-B.  
+#b.  
 
 ```{r}
 datac$Sex <- factor(datac$Sex, levels = c("Male", "Female"), labels = c(1,2))
 datac
 ```
 
-C.  
+#c.  
 
 ```{r}
 datac$TypesOfHouses <- factor(datac$TypesOfHouses, levels = c("Wood", "Congrete", "Semi-congrete"), labels = c(1,2,3))
@@ -104,25 +104,25 @@ datac
 
 ```
 
-D.  
+#d.  
 
 ```{r}
 datac$FathersOccupation <- factor(datac$FathersOccupation, levels = c(1,2,3), labels = c("Farmer", "Driver", "Others"))
 datac
 ```
 
-E.  
+#e.  
 
 ```{r}
 FemaleDriverDad <- subset(datac, Sex == 2 & FathersOccupation =="Driver")
 FemaleDriverDad
 ```
 
-F.  
+#f.  
 
 ```{r}
 manysiblings <- subset(datac, Respondents & SiblingsAtSchool >= 5)
 manysiblings
 ```
 
-4.  The graph shows thw Sentiments Of Tweets Per Day, from July 14, 2020 to July 21, 2020.The red shows negative, orange shows neutral, and blue shows a positive.As the graph shows that the negative tweets is the highest of the all.
+#4.  The graph shows thw Sentiments Of Tweets Per Day, from July 14, 2020 to July 21, 2020.The red shows negative, orange shows neutral, and blue shows a positive.As the graph shows that the negative tweets is the highest of the all.
